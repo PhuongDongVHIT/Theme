@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Studio Ghibli</title>
+	<LINK REL="SHORTCUT ICON"  HREF="image/logo/Mirella-Gabriele-Steampunk-Steampunk.ico">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css//bootstrap-grid.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-grid.min.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-reboot.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-reboot.min.css">
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+	<link href="https://fonts.googleapis.com/css?family=EB+Garamond" rel="stylesheet">
+	
+	<!-- import icon font awesome -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<!-- Import thư viện JQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script>
+	    // kéo xuống khoảng cách 500px thì xuất hiện nút Top-up
+	    var offset = 500;
+	    // thời gian di trượt 0.75s ( 1000 = 1s )
+	    var duration = 750;
+	    $(function(){
+	    $(window).scroll(function () {
+	    if ($(this).scrollTop() > offset)
+	    $('#top-up').fadeIn(duration);else
+	    $('#top-up').fadeOut(duration);
+	    });
+	    $('#top-up').click(function () {
+	    $('body,html').animate({scrollTop: 0}, duration);
+	    });
+	    });
+	</script>
+	<div title="Về đầu trang" onmouseover="this.style.color='#590059'" onmouseout="this.style.color='#004993'" id="top-up">
+	    <i class="fa fa-caret-square-o-up"></i>
+	</div>
+	<style>
+	    #top-up {
+	    background:none;
+	    font-size: 3em;
+	    text-shadow:0px 0px 5px #c0c0c0;
+	    cursor: pointer;
+	    position: fixed;
+	    z-index: 9999;
+	    color:#004993;
+	    bottom: 20px;
+	    right: 15px;
+	    display: none;
+	    }
+	</style>
+
+	<style type="text/css">
+		body{
+			font-family: 'EB Garamond', serif;
+			font-size: 20px;
+		}
+	</style>
+
+	<style>
+		  .container-fluid {
+		    padding: 50px 60px;
+		  }		 
+		  .item span {
+		    font-style: normal;
+		  }
+		  @media screen and (max-width: 768px) {
+		    .col-sm-4 {
+		      text-align: center;
+		      margin: 25px 0;
+		    }
+		  }
+	    footer {
+		    background-color: #f2f2f2;
+		    padding: 25px;
+	    }
+	</style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">        
+        <a class="navbar-brand" href="#">
+        		<img src="image/image_navbar/home-icon.png" width="30" height="30" class="d-inline-block align-top" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Trang chủ <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#1">Thông tin</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#2">Phim</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#3">Hình ảnh</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#4">Liên hệ</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Tìm" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Tìm kiếm</button>
+            </form>
+        </div>       
+    </nav>
+
+	<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+	    <ol class="carousel-indicators">
+	        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+	        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+	        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+	        <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+	    </ol>
+	    <div class="carousel-inner">
+	        <div class="carousel-item active">
+	            <img src="image/image_banner/other_anime_studio_ghibli.jpg" class="d-block w-100" alt="...">
+	            <div class="carousel-caption d-none d-md-block" style="color: #ffffff;">
+	                <h5>Ghibli</h5>
+	                <p>Huyền thoại sống của Nhật Bản</p>
+	            </div>
+	        </div>
+	        <div class="carousel-item">
+	            <img src="image/image_banner/my_neighbor_totoro_studio_ghibli.jpg" class="d-block w-100" alt="...">
+	            <div class="carousel-caption d-none d-md-block" style="color: #ffffff;">
+	                <h5>Ghibli</h5>
+	                <p>mang đến những thước phim khiêm nhường nhất nhưng cũng đẹp đẽ nhất, giản dị nhất mà cũng nhân văn và đầy tình cảm nhất</p>
+	            </div>
+	        </div>
+	        <div class="carousel-item">
+	            <img src="image/image_banner/other_anime_studio_ghibli_5.jpg" class="d-block w-100" alt="...">
+	            <div class="carousel-caption d-none d-md-block" style="color: #ffffff;">
+	                <h5>Ghibli</h5>
+	                <p>đã trở thành một biểu tượng của quan điểm, phong cách nghệ thuật và định hướng điện ảnh khó nhầm lẫn của người Nhật</p>
+	            </div>
+	        </div>
+	        <div class="carousel-item">
+	            <img src="image/image_banner/princess_mononoke_studio_ghibli.jpg" class="d-block w-100" alt="...">
+	            <div class="carousel-caption d-none d-md-block" style="color: #ffffff;">
+	                <h5>Ghibli</h5>
+	                <p>Những bộ phim hoạt hình không chỉ dành cho trẻ con, mà để nuôi dưỡng cảm xúc cho nhiều thế hệ</p>
+	            </div>
+	        </div>
+	    </div>
+	    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+	    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+	    <span class="sr-only">Previous</span>
+	    </a>
+	    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+	    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+	    <span class="sr-only">Next</span>
+	    </a>
+	</div>
+
+	<div class="container-fluid bg-grey" id="1" style="background-image: url('image/image_info/other_anime_studio_ghibli_1.jpg');">
+	    <div class="row">
+	        <div class="col-sm-4" style="text-align: center;">
+            	<a href="#">
+            		<img src="image/image_info/totoro.png">
+            	</a>
+	        </div>
+	        <div class="col-sm-8">
+	            <h2>Studio Ghibli_Tên gọi và biểu tượng</h2>
+	            <p><strong>Tên gọi Ghibli</strong>  được đặt bởi giám đốc Miyazaki Hayao dựa trên tên gọi của chiếc phi cơ Caproni Ca.309 Ghibli, một loại máy bay trinh sát của Italia sử dụng trong Chiến tranh thế giới thứ hai. Trong tiếng Ý, danh từ "ghibli" dựa trên tên bằng tiếng Ả Rập cho sirocco, hay gió Địa Trung Hải - chỉ những cơn gió nóng thổi qua sa mạc Sahara, ý tưởng gợi ý cho định hướng của studio là sẽ "thổi một luồng gió mới vào ngành công nghiệp anime của Nhật Bản".</p>
+	            <p><strong>Biểu tượng của công ty</strong> là nhân vật Totoro trong bộ phim hoạt hình của Miyazaki Tonari no Totoro (Hàng xóm của tôi là Totoro).</p>
+	        </div>
+	    </div>
+	</div>
+
+	<div class="container-fluid" style="background-color: #FDF5E6">
+		<div class="container" style="text-align: center;">
+			<h3>Studio Ghibli_lịch sử</h3>
+			<h5>&hearts; 15/06/1985</h5>
+			<p>Thành lập bởi hai đạo diễn phim hoạt hình nổi tiếng Miyazaki Hayao và Takahata Isao.</p>
+			<h5>&hearts; 08/1996</h5>
+			<p>Disney và nhà xuất bản Tokuma Shoten đã đồng ý rằng Walt Disney Studios Motion Pictures sẽ phát hành các phim hoạt hình Studio Ghibli của Tokuma trên toàn thế giới.</p>
+			<h5>&hearts; 10/2001</h5>
+			<p>bảo tàng Ghibli mở cửa tại Mitaka, Tokyo. Nó trưng bày các vật dựa trên các bộ phim của Ghibli và triển lãm các phim hoạt hình, bao gồm một số các phim ngắn của Ghibli không có sẵn ở nơi khác.</p>
+			<h5>&hearts; 01/02/2008</h5>
+			<p>Suzuki Toshio đã rời vị trí chủ tịch Studio Ghibli mà ông đã giữ kể từ năm 2005, và Koji Hoshino (cựu chủ tịch của Walt Disney Nhật Bản) đã tiếp quản. </p>
+			<h5>&hearts; 26/03/2011</h5>
+			<p>Hai phim ngắn Studio Ghibli được tạo cho bảo tàng Ghibli được trưng bày tại Carnegie Hall Citywise Japan NYC Festival: "House Hunting" và "Mon Mon the Water Spider".</p>
+			<h5>&hearts; 01/09/2013</h5>
+			<p>Hayao Miyazaki đã tổ chức họp báo ở Venice để xác nhận mình nghỉ hưu, nói rằng: "Tôi biết tôi đã nói rằng tôi sẽ nghỉ hưu nhiều lần trong quá khứ. Nhiều người trong số các bạn sẽ nghĩ, 'Một lần nữa.' Nhưng lần này tôi khá nghiêm trọng."</p>
+			<h5>&hearts; 31/01/2014</h5>
+			<p>Hãng công bố Gorō Miyazaki sẽ chỉ đạo chuỗi phim hoạt hình truyền hình đầu tiên của ông ấy, Sanzoku no Musume Rōnya, một chuyển thể của Ronia the Robber's Daughter của tác giả Astrid Lindgren cho NKH.</p>
+			<h5>&hearts; 03/2014</h5>
+			<p>Suzuki Toshio về hưu khi là một nhà sản xuất và đảm nhận vị trí mới của tổng giám đốc</p>
+			<h5>&hearts; 03/08/2014</h5>
+			<p>Suzuki Toshio thông báo rằng Studio Ghibli sẽ có một "khoảng dừng ngắn" để đánh giá lại và tái cấu trúc trong bối cảnh Miyazaki về hưu.</p>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="container-fluid" style="text-align: center;">
+		    <h3 class="text-info" style="text-align: center;">Cùng phưu lưu vào thế giới phim Ghibli</h3>
+		    <p>Trải nghiệm những thước phim khiêm nhường nhất nhưng cũng đẹp đẽ nhất, giản dị nhất mà cũng nhân văn và đầy tình cảm nhất.</p>
+		    <div class="row">
+		        <div class="col-sm-4">
+		            <div class="card">
+		                <img src="image/image_movie/Neko.no.Ongaeshi.jpg" class="card-img-top" alt="EKO NO ONGAESHI">
+		                <div class="card-body">
+		                    <h5 class="card-title">NEKO NO ONGAESHI</h5>
+		                    <p class="card-text">Phim kể về nhân vật chính Haru – một học sinh nữ 17 tuổi điển hình...</p>
+		                    <p>Năm sản xuất: 1996</p>
+		                </div>
+		            </div>
+		        </div>
+		        <div class="col-sm-4">
+		            <div class="card">
+		                <img src="image/image_movie/Mononoke.Hime.jpg" class="card-img-top" alt="Mononoke.Hime.jpg">
+		                <div class="card-body">
+		                    <h5 class="card-title">PRINCESS MONONOKE</h5>
+		                    <p class="card-text">Câu chuyện xảy ra vào thời Senkoku. Một lãng khách tên là Nanashi...</p>
+		                    <p>Năm sản xuất: 1997</p>
+		                </div>
+		            </div>
+		        </div>
+		        <div class="col-sm-4">
+		            <div class="card">
+		                <img src="image/image_movie/from-up-on-poppy-hill.jpg" class="card-img-top" alt="FROM UP ON POPPY HILL">
+		                <div class="card-body">
+		                    <h5 class="card-title">FROM UP ON POPPY HILL</h5>
+		                    <p class="card-text">Bộ phim lấy bối cảnh những năm 1960 khi nước Nhật đang trong giai...</p>
+		                    <p>Năm sản xuất: 2011</p>
+		                </div>
+		            </div>
+		        </div>
+		    </div>
+		    <div class="row">
+		        <div class="col-sm-4">
+		            <div class="card">
+		                <img src="image/image_movie/Arrietty-and-Shou-karigurashi-no-arrietty.jpg" class="card-img-top" alt="KARIGURASHI NO ARRIETTY">
+		                <div class="card-body">
+		                    <h5 class="card-title">KARIGURASHI NO ARRIETTY</h5>
+		                    <p class="card-text">Sho là một cậu bé bị bệnh tim. Cậu rời thành phố, về ngôi nhà ngày xưa...</p>
+		                    <p>Năm sản xuất: 2010</p>
+		                </div>
+		            </div>
+		        </div>
+		        <div class="col-sm-4">
+		            <div class="card">
+		                <img src="image/image_movie/Tenkuu.no.Shiro.Laputa.jpg" class="card-img-top" alt="TENKUU NO SHIRO LAPUTA">
+		                <div class="card-body">
+		                    <h5 class="card-title">TENKUU NO SHIRO LAPUTA</h5>
+		                    <p class="card-text">Trên trời cao chợt xuất hiện những tia sáng kỳ ảo, lung linh hạ xuống...</p>
+		                    <p>Năm sản xuất: 1986</p>
+		                </div>
+		            </div>
+		        </div>
+		        <div class="col-sm-4">
+		            <div class="card">
+		                <img src="image/image_movie/Ponyo.jpg" class="card-img-top" alt="PONYO">
+		                <div class="card-body">
+		                    <h5 class="card-title">PONYO</h5>
+		                    <p class="card-text">Cậu bé Sousuke cứu được một chú cá vàng, đặt tên là Ponyo. Cả hai cùng hòa...</p>
+		                    <p>Năm sản xuất: 2008</p>
+		                </div>
+		            </div>
+		        </div>
+		    </div>
+		    <div class="row">
+		        <div class="col-sm-4">
+		            <div class="card">
+		                <img src="image/image_movie/Pom-Poko.jpg" class="card-img-top" alt="POM POKO">
+		                <div class="card-body">
+		                    <h5 class="card-title">POM POKO</h5>
+		                    <p class="card-text">Đối mặt với sự hủy hoại môi trường sống vì sự phát triển của thành phố Tokyo...</p>
+		                    <p>Năm sản xuất: 1994</p>
+		                </div>
+		            </div>
+		        </div>
+		        <div class="col-sm-4">
+		            <div class="card">
+		                <img src="image/image_movie/spirited-away.jpg" class="card-img-top" alt="SPIRITED AWAY">
+		                <div class="card-body">
+		                    <h5 class="card-title">SPIRITED AWAY</h5>
+		                    <p class="card-text">Câu chuyện bắt đầu trên con đường chuyển đến nhà mới của cô bé 10 tuổi Chihiro...</p>
+		                    <p>Năm sản xuất: 2001</p>
+		                </div>
+		            </div>
+		        </div>
+		        <div class="col-sm-4">
+		            <div class="card">
+		                <img src="image/image_movie/TALES FROM EARTHSEA.jpg" class="card-img-top" alt="TALES FROM EARTHSEA">
+		                <div class="card-body">
+		                    <h5 class="card-title">TALES FROM EARTHSEA</h5>
+		                    <p class="card-text">Cốt truyện xoay quanh Arren người đã ám sát vua của Enlad lấy...</p>
+		                    <p>Năm sản xuất: 2006</p>
+		                </div>
+		            </div>
+		        </div>
+		    </div>
+		    <div class="row">
+		        <div class="col-sm-4">
+		            <div class="card">
+		                <img src="image/image_movie/Porco-Rosso-wallpaper.jpg" class="card-img-top" alt="PORCO ROSSO">
+		                <div class="card-body">
+		                    <h5 class="card-title">PORCO ROSSO</h5>
+		                    <p class="card-text">Câu chuyện về 1 người phi công bị biến thành lợn!</p>
+		                    <p>Năm sản xuất: 1992</p>
+		                </div>
+		            </div>
+		        </div>
+		        <div class="col-sm-4">
+		            <div class="card">
+		                <img src="image/image_movie/GRAVE OF THE FIREFLIES.jpg" class="card-img-top" alt="GRAVE OF THE FIREFLIES">
+		                <div class="card-body">
+		                    <h5 class="card-title">GRAVE OF THE FIREFLIES</h5>
+		                    <p class="card-text">TBộ phim được đặt trong bối cảnh giai đoạn cuối chiến tranh thế giới thứ 2 ở Nhật...</p>
+		                    <p>Năm sản xuất: 1988</p>
+		                </div>
+		            </div>
+		        </div>
+		        <div class="col-sm-4">
+		            <div class="card">
+		                <img src="image/image_movie/OMOIDE NO MARNIE.jpg" class="card-img-top" alt="OMOIDE NO MARNIE">
+		                <div class="card-body">
+		                    <h5 class="card-title">OMOIDE NO MARNIE</h5>
+		                    <p class="card-text">Chuyển thể từ tiểu thuyết "When Marnie was there" của nhà văn Joan G. Robinson kể về cô bé Anna</p>
+		                    <p>Năm sản xuất: 2014</p>
+		                </div>
+		            </div>
+		        </div>
+		    </div>
+		</div>
+	</div>
+
+	<div class="container-fluid text-center" style="background-color: #FFEFD5;">
+		<h2>Ghibli_thành tựu</h2>
+		<h5>&diams; Những thành tựu đáng kể &diams;</h5>
+		<div class="row">
+		    <div class="col-sm-4">
+		        <span class="glyphicon"><img src="image/image_ser/star-full-icon.png"></span>
+		        <h4>1989</h4>
+		        <p>Doanh thu cao nhất năm ở Nhật Bản</p>
+		    </div>
+		    <div class="col-sm-4">
+		        <span class="glyphicon"><img src="image/image_ser/star-full-icon.png"></span>
+		        <h4>1991</h4>
+		        <p>Doanh thu cao nhất năm ở Nhật Bản.</p>
+		    </div>
+		    <div class="col-sm-4">
+		        <span class="glyphicon"><img src="image/image_ser/star-full-icon.png"></span>
+		        <h4>1992</h4>
+		        <p>Doanh thu cao nhất năm ở Nhật Bản.</p>
+		    </div>
+		</div>
+		<div class="row">
+		    <div class="col-sm-4">
+		        <span class="glyphicon"><img src="image/image_ser/star-full-icon.png"></span>
+		        <h4>1994</h4>
+		        <p>doanh thu cao nhất năm ở Nhật Bản</p>
+		    </div>
+		    <div class="col-sm-4">
+		        <span class="glyphicon"><img src="image/image_ser/star-full-icon.png"></span>
+		        <h4>2013</h4>
+		        <p>Doanh thu cao nhất năm ở Nhật Bản</p>
+		    </div>
+		    <div class="col-sm-4">
+		        <span class="glyphicon"><img src="image/image_ser/star-full-icon.png"></span>
+		        <h4>Công nghệ</h4>
+		        <p>Ghibli đầu tiên sử dụng đồ hoạ máy tính</p>
+		    </div>
+		</div>
+	</div>
+
+	<div class="container" id="4">
+	    <h3 class="text-center">Liên hệ</h3>
+	    <p class="text-center"><em>Chúng tôi yêu Ghibli</em></p>
+	    <div class="row">
+	        <div class="col-md-4">
+	            <p>Địa chỉ</p>
+	            <p><span class="glyphicon glyphicon-map-marker"></span>Phương Đông Ghibli</p>
+	            <p><span class="glyphicon glyphicon-phone"></spans>Sđt : +840965617557</p>
+	            <p><span class="glyphicon glyphicon-envelope"></span>Email: catmusic435@mail.com</p>
+	        </div>
+	        <div class="col-md-8">
+	            <div class="row">
+	                <div class="col-sm-6 form-group">
+	                    <input class="form-control" id="name" name="name" placeholder="Tên bạn" type="text" required>
+	                </div>
+	                <div class="col-sm-6 form-group">
+	                    <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+	                </div>
+	            </div>
+	            <textarea class="form-control" id="comments" name="comments" placeholder="Nội dung" rows="5"></textarea>
+	            <br>
+	            <div class="row">
+	                <div class="col-md-12 form-group">
+	                    <button class="btn btn-outline-primary" type="submit">gửi</button>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+	</div>
+
+	<footer class="container-fluid">
+		<div id="carouselExampleControls" class="carousel slide" data-ride="carousel" style="text-align: center;">
+		    <div class="carousel-inner">
+		        <div class="carousel-item active">
+	                <h5>Ghibli</h5>
+	                <p>Những bộ phim hoạt hình không chỉ dành cho trẻ con, mà để nuôi dưỡng cảm xúc cho nhiều thế hệ</p>
+		        </div>
+		        <div class="carousel-item">
+	                <h5>Ghibli</h5>
+	                <p>Không chỉ là một hãng phim, mà còn là một phong cách với những dấu ấn riêng</p>
+		        </div>
+		        <div class="carousel-item">
+	                <h5>Ghibli</h5>
+	                <p>Huyền thoại sống của nước Nhật</p>
+		        </div>
+		        <div class="carousel-item">
+	                <h5>Ghibli</h5>
+	                <p>Những bộ phim hoạt hình không chỉ dành cho trẻ con, mà để nuôi dưỡng cảm xúc cho nhiều thế hệ</p>
+		        </div>
+		    </div>
+		    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+		    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+		    <span class="sr-only">Previous</span>
+		    </a>
+		    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+		    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+		    <span class="sr-only">Next</span>
+		    </a>
+		</div>
+	</footer>
+
+	<script type="text/javascript" src="js/bootstrap.bundle.js"></script>
+	<script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+</body>
+</html>
